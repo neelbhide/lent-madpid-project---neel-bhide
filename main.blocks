@@ -1,1 +1,18 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="uCUJmMeV_7r)Ld3_X?uQ" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="8aV*Bp(MLeiKKQ#KRO=w"><value name="color"><shadow type="colorindexpicker" id="q.*b_bbf;gVygVAywcvC"><field name="index">15</field></shadow></value></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="wfGkpZieW,)39CO*Dtzo">mySprite</variable><variable type="KIND_SpriteKind" id="r^P4%,gH1EI;[)~5`E}7">Player</variable><variable type="KIND_SpriteKind" id="Nd`6@AZ$;zG1bpyf^HsA">Projectile</variable><variable type="KIND_SpriteKind" id="B6[p2,D!wo;(_l/XM1bq">Food</variable><variable type="KIND_SpriteKind" id="H)9}~^=3gy+d^Qz+Ay0B">Enemy</variable></variables><block type="pxt-on-start" id="uCUJmMeV_7r)Ld3_X?uQ" x="10" y="-10"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="8aV*Bp(MLeiKKQ#KRO=w"><value name="color"><shadow type="colorindexpicker" id="q.*b_bbf;gVygVAywcvC"><field name="index">15</field></shadow></value><next><block type="variables_set" id="IB;aYRV-bcWVZu;X@|vT"><field name="VAR" id="wfGkpZieW,)39CO*Dtzo">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="(eZuWX7D,*yW}AMf.595"><value name="img"><shadow type="screen_image_picker" id="(;aL_i`8a#}9tCklLe7c"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . f f f f f f . . . . 
+. . . . f f e e e e f 2 f . . . 
+. . . f f e e e e f 2 2 2 f . . 
+. . . f e e e f f e e e e f . . 
+. . . f f f f e e 2 2 2 2 e f . 
+. . . f e 2 2 2 f f f f e 2 f . 
+. . f f f f f f f e e e f f f . 
+. . f f e 4 4 e b f 4 4 e e f . 
+. . f e e 4 d 4 1 f d d e f . . 
+. . . f e e e e e d d d f . . . 
+. . . . . f 4 d d e 4 e f . . . 
+. . . . . f e d d e 2 2 f . . . 
+. . . . f f f e e f 5 5 f f . . 
+. . . . f f f f f f f f f f . . 
+. . . . . f f . . . f f f . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="q_~?x3@|0Hh#Gz-!.ak4"><field name="MEMBER">Player</field></shadow></value></block></value></block></next></block></statement></block></xml>
