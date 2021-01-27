@@ -1,7 +1,13 @@
 controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
-    Crosser.vy = -100
+    if (Crosser.y >= 80) {
+        Crosser.vy = -200
+    }
 })
-let projectile: Sprite = null
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    game.over(false)
+})
+let tree_stump: Sprite = null
+let speed = 0
 let Crosser: Sprite = null
 scene.setBackgroundColor(13)
 Crosser = sprites.create(img`
@@ -25,12 +31,15 @@ Crosser = sprites.create(img`
 Crosser.setPosition(10, 80)
 game.onUpdate(function () {
     if (Crosser.y < 80) {
-        Crosser.ay = 30
+        Crosser.ay = 450
+    } else {
+        Crosser.ay = 0
+        Crosser.vy = 0
     }
-    Crosser.ay = 0
 })
 game.onUpdateInterval(2000, function () {
-    projectile = sprites.createProjectileFromSide(img`
+    speed = -100 - game.runtime() / 250
+    tree_stump = sprites.createProjectileFromSide(img`
         .....6feeeeeeeeeef6.....
         ....6776eeeeeeeee676....
         ...6777666eeee6667776...
@@ -63,6 +72,7 @@ game.onUpdateInterval(2000, function () {
         ........................
         ........................
         ........................
-        `, -100, 0)
-    projectile.y = 80
+        `, speed, 0)
+    tree_stump.y = 80
+    info.changeScoreBy(10)
 })
