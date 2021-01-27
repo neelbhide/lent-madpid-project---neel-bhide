@@ -23,6 +23,12 @@ Crosser = sprites.create(img`
     . . . . . f f . . . f f f . . . 
     `, SpriteKind.Player)
 Crosser.setPosition(10, 80)
+game.onUpdate(function () {
+    if (Crosser.y < 80) {
+        Crosser.ay = 30
+    }
+    Crosser.ay = 0
+})
 game.onUpdateInterval(2000, function () {
     projectile = sprites.createProjectileFromSide(img`
         .....6feeeeeeeeeef6.....
